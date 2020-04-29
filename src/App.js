@@ -1,12 +1,10 @@
 import React from 'react';
-import ForceUpdateExample from './03/ForceUpdateExample';
+import Counter from "./03/Counter3";
 
 class App extends React.Component{
   render(){
     return(
-      <div>
-        <ForceUpdateExample />
-      </div>
+      <Counter />
     );
   }
 }

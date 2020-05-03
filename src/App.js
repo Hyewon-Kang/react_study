@@ -1,10 +1,18 @@
 import React from 'react';
-import Counter from "./03/Counter3";
+import "./sass/materialize.scss";
+import "./App.css";
 
 class App extends React.Component{
   render(){
     return(
-      <Counter />
+      <div>
+        <nav>
+          <div className="nax-wrapper">
+            <div>두잇! 리액트 시작하기</div>
+          </div>
+        </nav>
+        <h1>머티리얼 CSS</h1>
+      </div>
     );
   }
 }

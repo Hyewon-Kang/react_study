@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, css, withStylesPropTypes } from './withStyles';
+import { withStyles, css, withStylesPropTypes } from './withStyle';
 
 class Input extends PureComponent {
     constructor(props) {

@@ -19,7 +19,7 @@ class Spacing extends PureComponent {
             top,
             left,
             right,
-            bottome,
+            bottom,
             vertical,
             horizontal
         } = this.props;

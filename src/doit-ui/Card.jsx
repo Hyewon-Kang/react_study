@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles, css, withStylesPropTypes } from './withStyle';
-import Spacing, { propTypes as sapcingPropTypes } from "./Spacing";
+import Spacing, { propTypes as spacingPropTypes } from "./Spacing";
 
 class Card extends PureComponent {
     render() {

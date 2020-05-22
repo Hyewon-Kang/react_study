@@ -26,6 +26,7 @@
     "recompose": "^0.30.0",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
     "sass-loader": "^8.0.2",
     "shallow-equal": "^1.2.1",
     "storybook-addon-jsx": "^7.2.3"
@@ -36,6 +37,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "mockserver": "json-server --watch --delay 500 --port 4000 mock/db.json",
+    "errorserver": "node mock/fake.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

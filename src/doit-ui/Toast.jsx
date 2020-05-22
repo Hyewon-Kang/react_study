@@ -2,11 +2,10 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles, css, withStylesPropTypes } from './withStyle';
 import Spacing from "./Spacing";
-import Teact from "./Text";
 
-class Toast extends PureCompoent {
+class Toast extends PureComponent {
     render() {
-        const { message, styles, wraning } = this.props;
+        const { message, styles, warning } = this.props;
 
         return(
             <div {...css(styles.overlay)}>

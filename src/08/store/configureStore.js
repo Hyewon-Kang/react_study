@@ -2,6 +2,7 @@ import { createStore, combineReducers, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import notificationEffects from "../middlewares/notificationEffects";
 import transactionEffects from "../middlewares/transactionEffects";
+import { middleware as reduxPackMiddleware } from "redux-pack";
 import reducers from "../reducers";
 import thunk from "redux-thunk";
 
@@ -25,6 +26,6 @@ export default initState => createStore(
     combineReducers(reducers),
     initState,
     composeWithDevTools(
-        applyMiddleware(thunk, notificationEffects, transactionEffects),
+        applyMiddleware(thunk, reduxPackMiddleware, notificationEffects, transactionEffects),
     ),
 );

@@ -5,6 +5,8 @@ import Card from "../../../doit-ui/Card";
 
 import TransactionSearchFilterContainer from "../../containers/main/TransactionSearchFilterContainer";
 import TransactionTable from "./TransactionTable";
+import TransactionPaginationContainer from "../../containers/main/TransactionPaginationContainer";
+import TransactionPagination from "./TransactionPagination";
 
 
 class TransactionList extends PureComponent{
@@ -17,7 +19,7 @@ class TransactionList extends PureComponent{
     }
 
     render() {
-        const { transaction } = this.props;
+        const { transaction, loading } = this.props;
         return(
             <div>
                 <Heading level={3}>거래 현황</Heading>
@@ -25,8 +27,9 @@ class TransactionList extends PureComponent{
                     <TransactionSearchFilterContainer />
                 </Card>
                 <Card>
-                    <TransactionTable transaction={transaction} />
+                    <TransactionTable transaction={transaction} isLoading={loading} />
                 </Card>
+                <TransactionPaginationContainer />
             </div>
         );
     }

@@ -2,6 +2,9 @@ import { createStore, combineReducers, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import notificationEffects from "../middlewares/notificationEffects";
 import transactionEffects from "../middlewares/transactionEffects";
+import searchFilterEffects from "../middlewares/searchFilterEffects";
+import routerEffects from "../middlewares/routerEffects";
+
 import { middleware as reduxPackMiddleware } from "redux-pack";
 import reducers from "../reducers";
 import thunk from "redux-thunk";
@@ -22,10 +25,10 @@ const customMiddleware2 = store => nextRunner => action => {
     return result;
 }
 
-export default initState => createStore(
+export default initStates => createStore(
     combineReducers(reducers),
-    initState,
+    initStates,
     composeWithDevTools(
-        applyMiddleware(thunk, reduxPackMiddleware, notificationEffects, transactionEffects),
+        applyMiddleware(thunk, reduxPackMiddleware, notificationEffects, transactionEffects, searchFilterEffects, routerEffects),
     ),
 );

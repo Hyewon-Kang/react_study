@@ -8,6 +8,7 @@ import ModalProvider from "./ModalProvider";
 import NotificationContainer from "./containers/main/NotificationContainer";
 import MainPage from "./components/main/MainPage";
 import NotFound from "./components/NotFound";
+import RouterStateContainer from "./containers/RouterStateContainer";
 
 class CoinApp extends PureComponent {
     store = congifureStore();
@@ -16,6 +17,7 @@ class CoinApp extends PureComponent {
         return (
             <Provider store={this.store}>
                 <Router>
+                    <RouterStateContainer />
                     <ModalProvider>
                         <AppLayout>
                             <Switch>

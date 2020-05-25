@@ -15,7 +15,7 @@ export default function createSelectors(resourceName) {
         entitiesSelector,
         pagesSelector,
         (entities, pages) =>
-        [].concat(...Object.values(pages)).map(id => entities[id])
+            [].concat(...Object.values(pages)).map(id => entities[id])
     );
     const loadingStateSelector = state => resourceSelector(state).loadingState;
     const errorStateSelector = state => resourceSelector(state).errorState;

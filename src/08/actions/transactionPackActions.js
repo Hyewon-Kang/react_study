@@ -1,8 +1,8 @@
-import Api from "../Api";
 import createActions from "../../11/api-redux-pack/createActions";
 
 const { collection, create, reset } = createActions("transactions");
 
+export const resetTransactionList = reset;
 export const FETCH_TRANSACTION_LIST = "transaction/FETCH_TRANSACTION_LIST";
 export const CREATE_TRANSACTION = "transaction/CREATE_TRANSACTION";
 

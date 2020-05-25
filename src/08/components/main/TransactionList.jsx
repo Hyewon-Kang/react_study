@@ -14,10 +14,6 @@ class TransactionList extends PureComponent{
         transaction: [],
     }
 
-    componentDidMount() {
-        this.props.requestTransactionList();
-    }
-
     render() {
         const { transaction, loading } = this.props;
         return(
